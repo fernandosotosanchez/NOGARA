@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tablas</title>
+</head>
+
+<style>
+  td,th{
+    border: 1px solid black;
+    padding: 5px;
+  }
+</style>
+<body>
+  <!-- colspan horizontal -->
+  <!-- roswspan vertical -->
+  <table>
+    <tr>
+      <td rowspan="2">1</td>
+      <td colspan="2">2</td>
+      <!-- <th>3</th> -->
+      <td>3</td>
+    </tr>
+
+    <tr>
+      <!-- <th>1</th> -->
+      <td colspan="3">2</td>
+      <!-- <th>3</th>
+      <th>4</th> -->
+    </tr>
+
+    <tr>
+      <td>1</td>
+      <td colspan="3">2</td>
+      <!-- <th>3</th>
+      <th>4</th> -->
+    </tr>
+  </table>
+  <hr>
+
+  <table>
+      <tr>
+          <td rowspan="2">1</td>
+          <td colspan="2">2</td>
+          <td>4</td>
+      </tr>
+
+      <tr>
+          <td colspan="3">2</td>
+      </tr>
+
+      <tr>
+          <td>1</td>
+          <td colspan="3">2</td>
+      </tr>
+  </table>
+
+  <hr>
+<table>
+  <thead>
+    <th>Titulo 1</th>
+    <th>Titulo 2</th>
+  </thead>
+
+  <tbody>
+    <td>subtitulo 1</td>
+    <td>subtitulo 2</td>
+  </tbody>
+
+  <tfoot>
+    <td>pie1</td>
+    <td>pie2</td>
+  </tfoot>
+</table>
+
+</body>
+</html>
