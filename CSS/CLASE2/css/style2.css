@@ -1,0 +1,32 @@
+.positions {
+  border: 10px solid black;
+  width: 90%;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: aquamarine;
+  margin: 10px;
+  text-align: center;
+  line-height: 200px;
+}
+
+.relative {
+  background-color: crimson;
+  position: relative;
+  /* top: ;
+  right:100px;
+  bottom:;
+  left: ; */
+}
+.absolute {
+  background-color: darkblue;
+  color: white;
+}
+
+.fixed {
+  background-color: fuchsia;
+}
