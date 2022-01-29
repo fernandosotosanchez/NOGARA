@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap");
+body {
+  height: 900vh;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  /* que el tamano del contenedor se conserve */
+  box-sizing: border-box;
+}
+
+/* barra de navegacion */
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.flex{
+    height: 600px;
+    border: 5px solid black;
+    width: 90%;
+    margin: 50px auto;
+    max-width: 1200px;
+    display: flex;
+    /* es la direccion en la que estaran mis elementos */
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    justify-content: center;
+    /* destribuye mi contenido al eje contrario al que estoy ejm:eje y  */
+    align-items: center;
+    /* dar vun espaciado a todo mi contenido */
+    gap: 10px;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.box{
+    width: 150px;
+    height: 150px;
+    background-color: aqua;
+    /* text-align: center;
+    line-height: 150px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.flex :nth-child(2){
+    background-color: crimson;
+    order: 4;
+}
+
+.flex :nth-of-type(3){
+    background-color: blueviolet;
+}
+.flex :nth-of-type(4){
+    background-color: darkgreen;
+    order: 1;
+}
+
+/* barra de navegacion */
+.menu{
+    background-color: darkgray;
+    margin: 50px 0;
+}
+.menu__container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__item{
+    width: 100%;
+    
+}
+
+.nav__link{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__link:hover{
+    background-color: aquamarine;
+    color: black;
+}
+

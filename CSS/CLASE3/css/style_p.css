@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  /* que el tamano del contenedor se conserve */
+  box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+/* hero */
+.hero{
+    background-image: linear-gradient(#5957dd,#e940e97c);
+    height: 100vh;
+}
+
+/* menu */
+
+
+.nav__container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__logo{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+}
+.nav__links{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+   
+}
+.nav__link{
+display: flex;
+align-items: center;
+padding: 0 20px;
+height: 50px;
+color: white;
+transition: .2s;
+}
+
+.nav__link:hover{
+    color: aqua;
+}
+
+.logo__menu{
+display: none;
+}
+
+/* hero main */
+.hero__main{
+    height: calc(100vh - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__text{
+    width: 50%;
+    color: white;
+}
+
+.hero__title{
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero__paragraph{
+    font-size: 20px;
+}
+
+.hero__link{
+    border: 3px solid white;
+    display: block;
+    width: max-content;
+    margin-top: 20px;
+    color: white;
+    font-weight: 700;
+    padding: 10px 30px;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.hero__link:hover{
+color: black;
+background-color: white;
+}
+
+.img__container{
+    width: 50%;
+    height: 700px;
+}
+
+.hero__img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* media querys */
+
+@media screen and (max-width:950px) {
+    .hero__title{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .hero{
+        height: auto;
+    }
+
+    .hero__main{
+        height: max-content;
+        padding: 50px 0;
+        flex-direction: column;
+    }
+
+    .hero__text{
+        width: 80%;
+        text-align: center;
+    }
+    .hero__link{
+        margin: 20px auto;
+    }
+
+    .img__container{
+        width: 70%;
+    }
+
+    .nav__logo{
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .nav__links{
+        display: none;
+    }
+
+    .logo__menu{
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+
