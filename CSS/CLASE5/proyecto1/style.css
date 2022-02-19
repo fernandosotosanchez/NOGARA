@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.card{
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(8,1fr);
+    
+}
+
+.card__container{
+    padding: 15px;
+    background-color: aqua;
+    color: white;
+    grid-column: 3/-1;
+    grid-row: 2/-2;
+}
+.card__container h2{
+    font-size: 3.5rem;
+}
+
+.card__container p{
+font-size: 1.8rem;
+font-weight: 300;
+}
+
+.card__container a{
+    font-size: 1.6rem;
+    border: 2px solid white;
+    padding: 1rem 2rem;
+    display: block;
+    width: max-content;
+    margin-top: 1rem;
+}
+
+.card::before{
+    content: "";
+    display: block;
+    background-color: brown;
+    grid-column: 1/4;
+    grid-row: 1/-1;
+    background-image: url(img/bg1.jpg);
+    background-size: cover;
+}
+
+
+@media screen and (max-width:700px){
+    html{
+        font-size: 9px;
+    }
+    .card{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);  
+    }
+
+    .card__container{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        text-align: center;
+    }
+    
+    .card__container a{
+        margin: 10px auto;
+        margin-bottom: -5px;
+    }
+}

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+html{
+    font-size: 10px;
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 100vh;
+    grid-template-areas: 
+    "form img"
+    ;
+}
+
+form{
+    width: 80%;
+    grid-area: form;
+    place-self: center;
+    display: grid;
+    gap: 10px;
+}
+
+form h2{
+font-size: 3rem;
+color:#5f5c5c ;
+}
+
+form h2::after{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: dodgerblue;
+}
+
+form input{
+    outline: none;
+    border: 3px dashed #ccc;
+    padding: 10px;
+}
+
+form input:focus{
+    border: 2px solid #ccc;
+}
+
+figure{
+    overflow: hidden;
+    grid-area: img;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+}
+
+img{
+    width: 100%;
+    max-width: 700px;
+    filter: drop-shadow(10px 0px 10px rgb(43, 68, 138));
+}
+
+figure::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: dodgerblue;
+    position: absolute;
+    z-index: -1;
+    clip-path: polygon(24% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+@media screen and (max-width:1050px) {
+    img{
+        max-width: 600px;
+    }
+    
+}
+
+@media screen and (max-width:900px){
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas: 
+        "img"
+        "form";
+    }
+
+
+    figure::after{
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+    }
+    form{
+        text-align: center;
+    }
+
+    form h2::after{
+        display: none;
+    }
+
+    img{
+        filter:none;
+    }
+}
