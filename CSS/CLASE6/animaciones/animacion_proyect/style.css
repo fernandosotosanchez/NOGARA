@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+html {
+    font-size: 10px;
+}
+
+
+
+body {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.ir {
+    text-decoration: none;
+    font-size: 2rem;
+    background-color: dodgerblue;
+    padding: 10px 30px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 1px #093e74;
+}
+
+.ir:active {
+    transform: scale(.9);
+    transition: .2s;
+}
+
+.container {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: #888282;
+    opacity: 0.1;
+    z-index: -1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.container__content {
+    width: 90%;
+    max-width: 1000px;
+    background-color: white;
+    padding: 20px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    position: relative;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.container__text{
+    transform: translateY(-200%);
+    transition: .5s;
+    transition-delay: 2s;
+}
+.container:target {
+    opacity: 1;
+    z-index: 2;
+}
+
+img {
+    width: 100%;
+}
+
+.close {
+    text-decoration: none;
+    font-size: 2rem;
+    width: 35px;
+    height: 35px;
+    background-color: #4d1be2;
+    color: white;
+    display: grid;
+    place-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+.container:target .container__content {
+    animation: card 1.5s;
+}
+
+@keyframes card {
+    0% {
+        transform: translateY(-200%);
+        filter: blur(20px);
+    }
+
+    50% {
+        transform: rotate(20deg);
+    }
+
+    80% {
+        transform: rotate(-20deg);
+    }
+
+    90% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.inicio:target .container__content {
+    transform: translateX(-200%) rotate(360deg);
+    opacity: .5;
+}
+
+.container:target .container__text {
+    animation: text 2s;
+    animation-delay: 1.5s;
+}
+
+@keyframes text {
+    100%{
+        transform: translateY(0);
+    }
+}
